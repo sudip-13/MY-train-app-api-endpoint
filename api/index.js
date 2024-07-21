@@ -1,7 +1,7 @@
 import express from "express";
 import { config } from "dotenv";
-import home from "./routes/home.js";
-import gettrain from "./routes/getTrains.js";
+import home from "../routes/home.js";
+import gettrain from "../routes/getTrains.js";
 
 config();
 
