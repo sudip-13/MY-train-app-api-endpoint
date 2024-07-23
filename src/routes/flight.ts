@@ -13,6 +13,7 @@ const amadeus = new Amadeus({
   clientSecret: process.env.CLIENT_SECRET
 });
 
+
 // Endpoint for airport search
 router.get(`/${API}/airports`, async (req, res) => {
   const { page, subType, keyword } = req.query;
@@ -32,6 +33,7 @@ router.get(`/${API}/airports`, async (req, res) => {
 
 // Endpoint for flight availability search
 router.post(`/${API}/flightavailabilities`, async (req, res) => {
+  console.log(process.env.CLIENT_ID)
   const {sourceCode, destinationCode,selectedDate,adult,children,infants}=req.body;
   try {
     const response = await amadeus.shopping.flightOffersSearch.get({
@@ -46,6 +48,7 @@ router.post(`/${API}/flightavailabilities`, async (req, res) => {
     res.json(response.data);
   } catch (error) {
     res.status(500).json({ error: error });
+    console.log(error);
   }
 });
 
