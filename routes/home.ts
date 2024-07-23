@@ -1,8 +1,8 @@
-import { Router } from "express";
+import { Router, Request, Response } from "express";
 
 const router = Router();
 
-router.get("/", (req, resp) => {
+router.get("/", (req: Request, resp: Response) => {
   resp.json({
     success: true,
     time_stamp: Date.now(),
