@@ -5,9 +5,9 @@ import bodyParser from 'body-parser';
 import dotenv from "dotenv";
 import path from "path";
 dotenv.config({ path: "./.env" });
-import router from "../routes/flight"
-import home from "../routes/home";
-import gettrain from "../routes/getTrains";
+import router from "./routes/flight"
+import home from "./routes/home";
+import gettrain from "./routes/getTrains";
 
 async function init() {
 
