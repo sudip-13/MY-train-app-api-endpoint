@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node build/api/index.js",
-    "dev": "tsc-watch --onSuccess \"npm start\""
+    "dev:server": "ts-node src/index.ts",
+    "build": "tsc"
   },
   "license": "MIT",
   "devDependencies": {
@@ -27,6 +27,7 @@
     "express": "^4.19.2",
     "graphql": "^16.9.0",
     "newsapi": "^2.4.1",
+    "ts-node": "^10.9.2",
     "user-agents": "^1.1.274"
   }
 }
